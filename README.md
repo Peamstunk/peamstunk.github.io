@@ -1,5 +1,5 @@
 # Peamstunk
 
 
-[Whimsy](https://peamstunk.github.io/whimsy/index.html)
+[Whimsy](https://peamstunk.github.io/whimsy/home.html)
 
