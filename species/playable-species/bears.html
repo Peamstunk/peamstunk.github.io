@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Bears</title>
+  <base href="../../">
+  <meta id="root-path" root-path="../../">
+
+  <link rel="icon" sizes="96x96" href="https://publish-01.obsidian.md/access/f786db9fac45774fa4f0d8112e232d67/favicon-96x96.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+  <meta charset="UTF-8">
+  <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+
+  <link rel="stylesheet" href="lib/styles/obsidian-styles.css">
+  <link rel="stylesheet" href="lib/styles/theme.css">
+  <link rel="stylesheet" href="lib/styles/plugin-styles.css">
+  <link rel="stylesheet" href="lib/styles/snippets.css">
+  <style>
+    body.css-settings-manager {}
+
+    body.theme-light.css-settings-manager {}
+
+    body.theme-dark.css-settings-manager {}
+  </style>
+
+
+  <!-- Graph View Data -->
+  <script>
+    let nodes = {
+      "nodeCount": 23,
+      "linkCount": 27,
+      "radii": [7, 6.4375, 6.4375, 6, 5.4375, 5.4375, 4.75, 4.75, 4.75, 4.75, 4.75, 4.75, 3.9375, 3.9375, 3.9375, 3.9375, 3.9375, 3.9375, 3.9375, 3.9375, 3.9375, 3.9375, 3.9375],
+      "labels": ["Magic and the Cs", "List of Species", "Citrus", "Sours", "Hays", "1) Characters, Stats and Traits", "Bears", "Cool", "Chilli", "The Sour Patch", "Character Sheet", "2) Non-Battle Actions", "index", "The World", "Mogus", "Clown", "Cheese", "Comet", "Crystal", "Chemical", "Cat (C)", "The High Bear Nation", "Changelog"],
+      "paths": ["magic/magic-and-the-cs.html", "species/list-of-species.html", "magic/the-7-cs/citrus.html", "species/playable-species/sours.html", "species/playable-species/hays.html", "game-system/1)-characters,-stats-and-traits.html", "species/playable-species/bears.html", "magic/the-7-cs/cool.html", "magic/the-7-cs/chilli.html", "geography/regions/the-sour-patch.html", "game-system/character-sheet.html", "game-system/2)-non-battle-actions.html", "index.html", "the-world.html", "species/playable-species/mogus.html", "magic/the-fake-cs/clown.html", "magic/the-fake-cs/cheese.html", "magic/the-7-cs/comet.html", "magic/the-7-cs/crystal.html", "magic/the-7-cs/chemical.html", "magic/the-7-cs/cat-(c).html", "geography/regions/the-high-bear-nation.html", "changelog.html"],
+      "linkSources": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 10, 2, 2, 2, 1, 1, 1, 1, 6, 4, 4, 11, 3, 3, 12],
+      "linkTargets": [13, 20, 2, 18, 19, 8, 7, 17, 15, 16, 10, 11, 1, 0, 9, 3, 6, 4, 14, 3, 21, 8, 7, 5, 9, 2, 22]
+    };
+    let attractionForce = 1;
+    let linkLength = 10;
+    let repulsionForce = 150;
+    let centralForce = 3;
+    let edgePruning = 100;
+  </script>
+
+  <script type="module" src="lib/scripts/graph_view.js"></script>
+
+  <script src="lib/scripts/graph_wasm.js"></script>
+
+  <script src="lib/scripts/tinycolor.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js" integrity="sha512-Ch/O6kL8BqUwAfCF7Ie5SX1Hin+BJgYH4pNjRqXdTEqMsis1TUYg+j6nnI9uduPjGaj7DN4UKCZgpvoExt6dkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="lib/scripts/webpage.js"></script>
+
+</head>
+
+<body class="mod-windows is-frameless is-hidden-frameless obsidian-app is-maximized theme-light show-inline-title show-view-header css-settings-manager" style="--zoom-factor:1; --font-text-size:16px; --line-width:50em; --line-width-adaptive:50em; --file-line-width:50em; --content-width:500em; --sidebar-width:25em; --collapse-arrow-size:0.4em; --tree-horizontal-spacing:1em; --tree-vertical-spacing:0.5em; --sidebar-margin:12px;">
+  <div class="webpage-container">
+    <div class="sidebar-left sidebar">
+      <div class="sidebar-content">
+        <div><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle">
+            <div class="toggle-background"></div>
+          </label></div>
+        <div class="tree-container file-tree mod-nav-indicator" data-depth="0">
+          <div class="tree-header"><span class="sidebar-section-header">Whimsical</span><button class="clickable-icon collapse-tree-button is-collapsed"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
+          <div class="tree-scroll-area">
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="game-system"><span class="tree-item-title">Game System</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="game-system/1)-characters,-stats-and-traits.html"><span class="tree-item-title">1) Characters, Stats and Traits</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="game-system/2)-non-battle-actions.html"><span class="tree-item-title">2) Non-Battle Actions</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="game-system/character-sheet.html"><span class="tree-item-title">Character Sheet</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="geography"><span class="tree-item-title">Geography</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="geography/regions"><span class="tree-item-title">Regions</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="geography/regions/the-high-bear-nation.html"><span class="tree-item-title">The High Bear Nation</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="geography/regions/the-sour-patch.html"><span class="tree-item-title">The Sour Patch</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="magic"><span class="tree-item-title">Magic</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="magic/the-7-cs"><span class="tree-item-title">The 7 Cs</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="magic/the-7-cs/cat-(c).html"><span class="tree-item-title">Cat (C)</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="magic/the-7-cs/chemical.html"><span class="tree-item-title">Chemical</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="magic/the-7-cs/chilli.html"><span class="tree-item-title">Chilli</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="magic/the-7-cs/citrus.html"><span class="tree-item-title">Citrus</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="magic/the-7-cs/comet.html"><span class="tree-item-title">Comet</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="magic/the-7-cs/cool.html"><span class="tree-item-title">Cool</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="magic/the-7-cs/crystal.html"><span class="tree-item-title">Crystal</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="magic/the-fake-cs"><span class="tree-item-title">The Fake Cs</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="magic/the-fake-cs/cheese.html"><span class="tree-item-title">Cheese</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="magic/the-fake-cs/clown.html"><span class="tree-item-title">Clown</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="magic/magic-and-the-cs.html"><span class="tree-item-title">Magic and the Cs</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="1">
+              <div class="tree-item-contents">
+                <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><a class="tree-item-link" href="species"><span class="tree-item-title">Species</span></a>
+              </div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-folder mod-collapsible is-collapsed" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="species/playable-species"><span class="tree-item-title">Playable Species</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="species/playable-species/bears.html"><span class="tree-item-title">Bears</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="species/playable-species/hays.html"><span class="tree-item-title">Hays</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="species/playable-species/mogus.html"><span class="tree-item-title">Mogus</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-file" data-depth="3">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="species/playable-species/sours.html"><span class="tree-item-title">Sours</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tree-item mod-tree-file" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="species/list-of-species.html"><span class="tree-item-title">List of Species</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-item mod-tree-file" data-depth="1">
+              <div class="tree-item-contents"><a class="tree-item-link" href="changelog.html"><span class="tree-item-title">Changelog</span></a></div>
+              <div class="tree-item-children"></div>
+            </div>
+            <div class="tree-item mod-tree-file" data-depth="1">
+              <div class="tree-item-contents"><a class="tree-item-link" href="index.html"><span class="tree-item-title">index</span></a></div>
+              <div class="tree-item-children"></div>
+            </div>
+            <div class="tree-item mod-tree-file" data-depth="1">
+              <div class="tree-item-contents"><a class="tree-item-link" href="the-world.html"><span class="tree-item-title">The World</span></a></div>
+              <div class="tree-item-children"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="document-container">
+      <div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists" style="tab-size: 4;">
+        <style id="MJX-CHTML-styles"></style>
+        <div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: ; padding-top: var(--file-margins); padding-right: var(--file-margins); padding-left: var(--file-margins); width: 100%; position: absolute;">
+          <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
+          <div class="mod-header">
+            <div class="inline-title" data-heading="Bears" id="Bears" style="display: block;">Bears</div>
+          </div>
+          <div>
+            <p><strong>Bears</strong> are the primary denizens of <a data-href="The High Bear Nation" href="geography/regions/the-high-bear-nation.html" class="internal-link" target="_self" rel="noopener">The High Bear Nation</a>. They are, as the name suggests, much like real life bears, although fully capable of walking on their hind legs and having a civilisation.</p>
+          </div>
+          <div>
+            <h2 data-heading="Description and Varieties" id="Description_and_Varieties" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Description and Varieties
+            </h2>
+          </div>
+          <div>
+            <p>Bears are, much like their real-life equivalents, large mammalian creatures, often very friend shaped and yet also having a reputation for being ferocious and dangerous. However, these bears typically stand on their hind-legs and are much better at walking as such, though being on all fours is not an uncommon sight. The overwhelming majority of bears are found in and around <a data-href="The High Bear Nation" href="geography/regions/the-high-bear-nation.html" class="internal-link" target="_self" rel="noopener">The High Bear Nation</a>, though specific locales may have more of one variety than another.</p>
+          </div>
+          <div>
+            <p>Below is a list of some of bear varieties:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><strong>Black Bears</strong> are the most common bear and are known for their arboreal lifestyle. They are found all across the High Bear Nation.
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div><strong>Brown Bears</strong> are the bears with the largest variation in sizes, though they are often the most famously known of the bears.
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div><strong>Polar Bears</strong> are the largest and strongest of all bears, and are typically found exclusively around the snow-capped peaks of the mountains.
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div><strong>Pandas</strong> are a unique kind of bear with a distinct black and white fur pattern, and typically found in the bamboo forests bordering the mountain range.
+              </li>
+              <li data-line="4">
+                <div class="list-bullet"></div><strong>Sun Bears</strong> are the smallest of the bear varieties, and are typically found in the jungles at the foothills of the southern mountains.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-heading="Society" id="Society" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Society
+            </h2>
+          </div>
+          <div>
+            <p>Bear society is largely based around <a data-href="The High Bear Nation" href="geography/regions/the-high-bear-nation.html" class="internal-link" target="_self" rel="noopener">The High Bear Nation</a>, dwelling in the large mountain ranges and the areas around it. Most bears live in smaller tribes and villages scattered across the highlands, typically autonomous villages, but often congregate in the nation's central valleys and mountain caverns for festivities.</p>
+          </div>
+          <div>
+            <p>Honey is considered a valuable commodity among bears. Being an apiarist is a respected line of work, and brings with it much prestige. Honey is used as a universal material, as currency, as food, as medicine, as drink (via mead), and more.</p>
+          </div>
+          <div>
+            <p>Bears tend to wear clothes that are inspired by Scottish highlanders, Tibetans and Incas, depending on the region they hail from. Often, it is a mix of two or all three. It is almost unheard of to see a bear without clothing of some sort - public nudity is not acceptable among bears.</p>
+          </div>
+          <div>
+            <p>Due to the mountainous and forest-filled nature of their homeland, most bears are skilled climbers. Climbing is considered both a means of getting around as well as a recreational pastime activity.</p>
+          </div>
+          <div>
+            <h2 data-heading="Traits" id="Traits" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Traits
+            </h2>
+          </div>
+          <div>
+            <p><em>&lt;WIP&gt;</em></p>
+          </div>
+          <div>
+            <h5 data-heading="General Bear Traits" id="General_Bear_Traits" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>General Bear Traits
+            </h5>
+          </div>
+          <div>
+            <blockquote>
+              <p><strong>Honeysense</strong> - You can detect the presence of honey from further than the average person.</p>
+            </blockquote>
+          </div>
+          <div>
+            <h5 data-heading="Bear Variant Traits" id="Bear_Variant_Traits" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Bear Variant Traits
+            </h5>
+          </div>
+          <div>
+            <p>Pandas:</p>
+          </div>
+          <div>
+            <blockquote>
+              <p><strong>Bambooworking</strong> - You can use bamboo for a variety of uses, including as a tasty snack.</p>
+            </blockquote>
+          </div>
+          <div>
+            <h2 data-heading="Notable Bears" id="Notable_Bears" style="display: flex;">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Notable Bears
+            </h2>
+          </div>
+          <div>
+            <p><strong>Kokane</strong> - King of the High Bear Nation, a Polar Bear known for his extremely white fur.</p>
+          </div>
+          <div class="mod-footer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-right sidebar">
+      <div class="sidebar-content"><span class="sidebar-section-header">Interactive Graph</span>
+        <div class="graph-view-placeholder">
+          <div class="graph-view-container">
+            <div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-arrow-up-right">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg></div>
+            <canvas id="graph-canvas" width="512px" height="512px"></canvas>
+          </div>
+        </div>
+        <div class="tree-container outline-tree" data-depth="0">
+          <div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button></div>
+          <div class="tree-scroll-area">
+            <div class="tree-item mod-tree-heading" data-depth="1">
+              <div class="tree-item-contents"><a class="tree-item-link" href="#Bears"><span class="tree-item-title">Bears</span></a></div>
+              <div class="tree-item-children">
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Description_and_Varieties"><span class="tree-item-title">Description and Varieties</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Society"><span class="tree-item-title">Society</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+                <div class="tree-item mod-tree-heading mod-collapsible" data-depth="2">
+                  <div class="tree-item-contents">
+                    <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div><a class="tree-item-link" href="#Traits"><span class="tree-item-title">Traits</span></a>
+                  </div>
+                  <div class="tree-item-children">
+                    <div class="tree-item mod-tree-heading" data-depth="5">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#General_Bear_Traits"><span class="tree-item-title">General Bear Traits</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                    <div class="tree-item mod-tree-heading" data-depth="5">
+                      <div class="tree-item-contents"><a class="tree-item-link" href="#Bear_Variant_Traits"><span class="tree-item-title">Bear Variant Traits</span></a></div>
+                      <div class="tree-item-children"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tree-item mod-tree-heading" data-depth="2">
+                  <div class="tree-item-contents"><a class="tree-item-link" href="#Notable_Bears"><span class="tree-item-title">Notable Bears</span></a></div>
+                  <div class="tree-item-children"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
